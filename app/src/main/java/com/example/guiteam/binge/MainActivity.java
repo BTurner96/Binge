@@ -1,5 +1,6 @@
 package com.example.guiteam.binge;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -7,6 +8,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Button;
+import com.example.guiteam.binge.MovieResults;
+import com.example.guiteam.binge.MovieObject;
+import com.example.guiteam.binge.SearchHandler;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,8 +30,23 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
         TextView editText = (TextView)findViewById(R.id.textView);
         editText.setText("New text");
+    }
+
+    public void changeActivity(View view){
+        Intent intent = new Intent(this, ScrollingActivity.class);
+        startActivity(intent);
+    }
+
+    public void search(View view) throws Exception{
+        SearchHandler request = new SearchHandler();
+        MovieObject[] result = new MovieObject[100];
+        result = request.movieSearch("Tangled");
+        TextView editText = (TextView)findViewById(R.id.textView);
+        String newText = result[0].title;
+        editText.setText(newText);
     }
 
 }
