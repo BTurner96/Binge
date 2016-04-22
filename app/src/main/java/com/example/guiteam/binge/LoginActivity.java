@@ -28,6 +28,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.content.Intent;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -86,7 +87,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         mEmailSignInButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                attemptLogin();
+                Intent newIntent = new Intent(LoginActivity.this, MainActivity.class );
+                //attemptLogin();
+                if(tryLogin()) {
+                    startActivity(newIntent);
+                }
             }
         });
 
@@ -137,6 +142,14 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         }
     }
 
+    private boolean tryLogin(){
+        String email = mEmailView.getText().toString();
+        String password = mPasswordView.getText().toString();
+        if(email.equals("email")&&password.equals("pass")){
+            return true;
+        }
+        return false;
+    }
 
     /**
      * Attempts to sign in or register the account specified by the login form.
