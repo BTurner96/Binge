@@ -6,4 +6,9 @@
 /build
 /captures
 .idea/misc.xml
+<<<<<<< HEAD
 .gradle/*
+=======
+*.class
+.gitignore
+>>>>>>> samantha
