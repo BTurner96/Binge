@@ -39,13 +39,15 @@ public class LocalMovie {
 
     }
 
-    public LocalMovieObject searchTitle(String search) throws Exception
+    public String[] searchTitle(String search) throws Exception
     {
-
-        LocalMovieObject result = null;
+         
+         
+        String [] result = new String[1000];
+        int j=0;
         for (int i=0; i<n; i++)
             if(movies[i].matchTitle(search))
-                result=movies[i];
+                result[j++]=movies[i].toString();
 
         return result;
 
