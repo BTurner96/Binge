@@ -39,15 +39,6 @@ public class LocalMovie {
 
     }
 
-<<<<<<< HEAD
-    public LocalMovieObject searchTitle(String search) throws Exception
-    {
-
-        LocalMovieObject result = null;
-        for (int i=0; i<n; i++)
-            if(movies[i].matchTitle(search))
-                result=movies[i];
-=======
     public String[] searchTitle(String search) throws Exception
     {
          
@@ -57,7 +48,6 @@ public class LocalMovie {
         for (int i=0; i<n; i++)
             if(movies[i].matchTitle(search))
                 result[j++]=movies[i].toString();
->>>>>>> 9646376bca5e8a8d44203b2d6939db54d488b42d
 
         return result;
 
