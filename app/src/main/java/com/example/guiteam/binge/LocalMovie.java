@@ -5,7 +5,7 @@ import java.io.PrintStream;
 /**
  * Created by Samantha on 4/21/2016.
  */
-public class LocalMovie {
+public class LocalMovie{
     LocalMovieObject [] movies; //array of movie objects
     String movieList="tinymovielist.txt"; //file movies are stored in
     int max=10000; //max amount of movies
