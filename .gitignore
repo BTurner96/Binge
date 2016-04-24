@@ -6,8 +6,5 @@
 /build
 /captures
 .idea/misc.xml
-<<<<<<< HEAD
-=======
+.idea/modules.xml
 *.class
-.gitignore
->>>>>>> samantha

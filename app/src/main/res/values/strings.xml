@@ -109,7 +109,6 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
-    <string name="title_activity_search">Home</string>
     <string name="title_activity_list">Search Results</string>
     <string name="title_activity_search">SearchActivity</string>
     <string name="title_activity_listing">ListingActivity</string>
