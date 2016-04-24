@@ -5,7 +5,7 @@ import java.io.PrintStream;
 /**
  * Created by Samantha on 4/21/2016.
  */
-public class LocalMovie {
+public class LocalMovie{
     LocalMovieObject [] movies; //array of movie objects
     String movieList="tinymovielist.txt"; //file movies are stored in
     int max=10000; //max amount of movies
@@ -39,7 +39,6 @@ public class LocalMovie {
 
     }
 
-<<<<<<< HEAD
     public LocalMovieObject searchTitle(String search) throws Exception
     {
 
@@ -47,17 +46,7 @@ public class LocalMovie {
         for (int i=0; i<n; i++)
             if(movies[i].matchTitle(search))
                 result=movies[i];
-=======
-    public String[] searchTitle(String search) throws Exception
-    {
-         
-         
-        String [] result = new String[1000];
-        int j=0;
-        for (int i=0; i<n; i++)
-            if(movies[i].matchTitle(search))
-                result[j++]=movies[i].toString();
->>>>>>> 9646376bca5e8a8d44203b2d6939db54d488b42d
+
 
         return result;
 
