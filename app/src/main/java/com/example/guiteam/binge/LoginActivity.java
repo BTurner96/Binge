@@ -36,12 +36,17 @@ import java.util.List;
 import static android.Manifest.permission.READ_CONTACTS;
 
 /**
+ * This is the first activity you see when you launch Binge.
  * A login screen that offers login via email/password.
+ * Upon entering the appropriate credentials and clicking the "sign in or register"
+ * button you will be sent to another page where you have full access to the app.
+ * Otherwise, without the appropriate credentials you will stay on this page and continue
+ * to be promoted to enter the correct email and password.
  */
 public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<Cursor> {
 
     /**
-     * Id to identity READ_CONTACTS permission request.
+     * Initializes ID for READ_CONTACTS permission request.
      */
     private static final int REQUEST_READ_CONTACTS = 0;
 
@@ -98,7 +103,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
     }
-
+    /*
+    *If a request for premission to access contacts cannot be made the page will not load.
+     */
     private void populateAutoComplete() {
         if (!mayRequestContacts()) {
             return;
@@ -107,6 +114,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         getLoaderManager().initLoader(0, null, this);
     }
 
+    /*
+    *The permission request to access the users contacts
+     */
     private boolean mayRequestContacts() {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
             return true;
@@ -141,7 +151,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             }
         }
     }
-
+    /*
+    *If a registered email address with the correct password are entered into the login
+    * the user will be granted access to the app.
+    * Currently a dummy email of "email" and password of "pass" grants access to the app.
+     */
     private boolean tryLogin(){
         String email = mEmailView.getText().toString();
         String password = mPasswordView.getText().toString();
@@ -214,7 +228,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     }
 
     /**
-     * Shows the progress UI and hides the login form.
+     * Shows the progress UI and hides the login form--Access has been granted!
      */
     @TargetApi(Build.VERSION_CODES.HONEYCOMB_MR2)
     private void showProgress(final boolean show) {
