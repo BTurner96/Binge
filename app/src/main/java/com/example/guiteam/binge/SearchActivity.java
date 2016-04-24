@@ -46,11 +46,12 @@ public class SearchActivity extends AppCompatActivity implements AdapterView.OnI
         list.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(this, ListingActivity.class);
+                Intent i = new Intent(SearchActivity.this, ListingActivity.class);
                 i.putExtra("searchElem","listall");
                 startActivity(i);
             }
         });
+
     }
 
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id){

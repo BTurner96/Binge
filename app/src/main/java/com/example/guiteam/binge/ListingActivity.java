@@ -29,19 +29,23 @@ public class ListingActivity extends AppCompatActivity {
         } else {
             search = (String) savedInstanceState.getSerializable("searchElem");
         }
+
         LocalMovie db = new LocalMovie();
         db.readLocalMovie();
         LocalMovieObject[] movies = new LocalMovieObject[1000];
         try {
             System.arraycopy(db.searchTitle(search), 0, movies, 0, 1000 );
-            movies = db.searchTitle(search);
+            //movies = db.searchTitle(search);
         }catch(Exception e){e.getMessage();}
 
         String[] returnStrings = new String[movies.length];
         for(int i=0; i<movies.length; i++){
+            returnStrings[i] = search;
             if(movies[i]!=null) {
-                //returnStrings[i] = search;
                 returnStrings[i] = movies[i].toString();
+            }
+            else{
+                //i=movies.length;
             }
         }
 
