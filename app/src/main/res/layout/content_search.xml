@@ -12,30 +12,71 @@
     tools:context="com.example.guiteam.binge.SearchActivity"
     tools:showIn="@layout/activity_search">
 
-    <SearchView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/searchView"
-        android:onClick="search"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true" />
-
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/editText"
         android:hint="@string/abc_search_hint"
-        android:layout_alignBottom="@+id/searchView"
+        android:layout_above="@+id/spinner"
         android:layout_alignParentStart="true"
-        android:layout_toStartOf="@+id/searchView" />
+        android:layout_alignEnd="@+id/button2" />
 
     <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:prompt="@string/search_by"
+        android:layout_above="@+id/button"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="87dp" />
+
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/spinner"
-        android:layout_below="@+id/editText"
-        android:layout_alignEnd="@+id/searchView"
-        android:spinnerMode="dropdown"
-        android:prompt="@string/search_by"
-        android:visibility="visible" />
+        android:text="Netflix"
+        android:id="@+id/button"
+        android:layout_alignTop="@+id/button2"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hulu"
+        android:id="@+id/button2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_marginBottom="194dp" />
+
+    <SearchView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchView"
+        android:onClick="search"
+        android:layout_alignBottom="@+id/editText"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/textView2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/searchView"
+        android:layout_alignParentEnd="true"
+        android:foregroundTint="#ef3333"
+        android:foreground="#f93b3b" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Binge"
+        android:id="@+id/textView3"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="50dp"
+        android:textIsSelectable="true"
+        android:textColor="#ffffff" />
 </RelativeLayout>
