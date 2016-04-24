@@ -36,13 +36,6 @@
         android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/movieCover"
-        android:layout_marginTop="5dp">
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/editText"
-            android:layout_weight="1" />
-    </LinearLayout>
+        android:layout_marginTop="5dp"></LinearLayout>
 
 </RelativeLayout>

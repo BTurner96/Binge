@@ -3,7 +3,8 @@ package com.example.guiteam.binge;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class MovieView extends AppCompatActivity {
+public class MovieView
+        extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
