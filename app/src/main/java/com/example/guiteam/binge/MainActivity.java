@@ -39,7 +39,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ScrollingActivity.class);
         startActivity(intent);
     }
-
+    /*
+    *The search method takes a search request and obtains the results in a list of movie objects
+    * displaying all the movies that match the search criteria.
+     */
     public void search(View view) throws Exception{
         SearchHandler request = new SearchHandler();
         MovieObject[] result = new MovieObject[100];
@@ -48,5 +51,4 @@ public class MainActivity extends AppCompatActivity {
         String newText = result[0].title;
         editText.setText(newText);
     }
-
 }

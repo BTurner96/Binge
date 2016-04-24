@@ -63,6 +63,8 @@
 
             </android.support.design.widget.TextInputLayout>
 
+            <!--With the appropriate credentials upon clicking this button you will be
+            taken to a new page and now have access to the app. -->
             <Button
                 android:id="@+id/email_sign_in_button"
                 style="?android:textAppearanceSmall"

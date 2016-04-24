@@ -4,14 +4,17 @@ import java.io.File;
 import java.io.PrintStream;
 /**
  * Created by Samantha on 4/21/2016.
+ *
+ * Reads movie objects from local text file and searches objects by title.
  */
 public class LocalMovie {
     LocalMovieObject [] movies; //array of movie objects
     String movieList="tinymovielist.txt"; //file movies are stored in
     int max=10000; //max amount of movies
     int n; //number of movies
+
     /*
-    * Reads movie file
+    * Reads movie file and puts the movies into movie object.
      */
     public void readLocalMovie()
     {
@@ -36,13 +39,12 @@ public class LocalMovie {
             System.err.println("Invalid data file: "+movieList);
             System.err.println(e);
         }
-
     }
-
+    /*
+    *Search movies by title. Case-Insensitive.
+     */
     public String[] searchTitle(String search) throws Exception
     {
-         
-         
         String [] result = new String[1000];
         int j=0;
         for (int i=0; i<n; i++)
@@ -50,6 +52,5 @@ public class LocalMovie {
                 result[j++]=movies[i].toString();
 
         return result;
-
     }
 }

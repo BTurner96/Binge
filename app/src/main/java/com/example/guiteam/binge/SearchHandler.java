@@ -29,6 +29,7 @@ public class SearchHandler {
         String result = new String(data);
         input.close();
         //end of borrowed code
+
         MovieResults results = gson.fromJson(result, MovieResults.class);
         results.addMovies();
         return results.objects;

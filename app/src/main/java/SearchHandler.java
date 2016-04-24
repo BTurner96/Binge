@@ -30,22 +30,37 @@ public class SearchHandler {
         String result = new String(data);
         input.close();
         //end of borrowed code
+
         MovieResults results = gson.fromJson(result, MovieResults.class);
         results.addMovies();
         return results.objects;
     }
-    //search movies
+
+    /*
+    *Searches the movie objects by title.
+    * Accepts string movie title as parameter.
+    * Returns the titles that matches the search criteria.
+    */
     public MovieObject[] movieSearch(String title) throws Exception{
         return search("/search/movie/title/"+encodeTitle(title));
     }
-    //search tv shows
+
+    /*
+    *Searches all of the objects by title.
+    *Accepts string title as parameter.
+    *Returns the titles that matches the search criteria.
+    */
     public MovieObject[] tvSearch(String title) throws Exception{
         return search("/search/title/"+encodeTitle(title));
     }
-    //search genre (only displays possible genres)
+
+    /*
+    *Displays all possible genres
+    */
     public MovieObject[] genreSearch() throws Exception{
         return search("/genres");
     }
+
     //removes non-alphabetic or non-numeric characters and encodes spaces as %252520
     public String encodeTitle(String title){
         String encodedTitle = "";
