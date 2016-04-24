@@ -47,14 +47,6 @@
         android:layout_alignStart="@+id/textView3"
         android:layout_marginBottom="194dp" />
 
-    <SearchView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/searchView"
-        android:onClick="search"
-        android:layout_alignBottom="@+id/editText"
-        android:layout_alignParentEnd="true" />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -63,10 +55,10 @@
         android:id="@+id/textView2"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:layout_above="@+id/searchView"
         android:layout_alignParentEnd="true"
         android:foregroundTint="#ef3333"
-        android:foreground="#f93b3b" />
+        android:foreground="#f93b3b"
+        android:layout_above="@+id/editText" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -79,4 +71,13 @@
         android:textSize="50dp"
         android:textIsSelectable="true"
         android:textColor="#ffffff" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go"
+        android:id="@+id/searchButton"
+        android:layout_below="@+id/textView2"
+        android:layout_toEndOf="@+id/textView3"
+        android:onClick="search" />
 </RelativeLayout>
