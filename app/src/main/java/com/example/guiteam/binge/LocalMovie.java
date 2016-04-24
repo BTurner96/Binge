@@ -39,17 +39,23 @@ public class LocalMovie{
 
     }
 
-    public LocalMovieObject[] searchTitle(String search) throws Exception
-    {
-         
-         
-        LocalMovieObject [] result = new LocalMovieObject[1000];
-        int j=0;
-        for (int i=0; i<n; i++)
-            if(movies[i].matchTitle(search)) {
-                result[j] = movies[i];
+    public LocalMovieObject[] searchTitle(String search) throws Exception {
+
+
+        LocalMovieObject[] result = new LocalMovieObject[1000];
+        int j = 0;
+        for (int i = 0; i < n; i++){
+            if (movies[i].matchTitle(search)) {
+                result[j].title = movies[i].title;
+                result[j].genre = movies[i].genre;
+                result[j].year = movies[i].year;
                 j++;
             }
+        }
+        LocalMovieObject[] finalResults = new LocalMovieObject[result.length];
+        for(int x=0; x<result.length; x++){
+            
+        }
 
         return result;
 

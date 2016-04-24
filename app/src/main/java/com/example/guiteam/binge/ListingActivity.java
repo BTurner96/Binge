@@ -40,12 +40,12 @@ public class ListingActivity extends AppCompatActivity {
 
         String[] returnStrings = new String[movies.length];
         for(int i=0; i<movies.length; i++){
-            returnStrings[i] = search;
-            if(movies[i]!=null) {
+            //returnStrings[i] = search;
+            if(movies[i].title == null) {
                 returnStrings[i] = movies[i].toString();
             }
             else{
-                //i=movies.length;
+                i=movies.length;
             }
         }
 
