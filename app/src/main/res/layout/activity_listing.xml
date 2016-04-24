@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.example.guiteam.binge.MainActivity">
+    tools:context="com.example.guiteam.binge.ListingActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -21,24 +21,6 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_main" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:text="@string/app_name"
-        android:onClick="changeActivity"
-        android:clickable="true"
-        android:enabled="true" />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|start"
-        android:text="@string/app_name"
-        android:onClick="search"
-        android:clickable="true"
-        android:enabled="true" />
-
+    <include layout="@layout/content_listing" />
 
 </android.support.design.widget.CoordinatorLayout>
