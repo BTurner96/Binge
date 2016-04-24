@@ -1,7 +1,9 @@
 package com.example.guiteam.binge;
 
 import android.app.Activity;
+import com.example.guiteam.binge.ListingActivity;
 import android.content.Intent;
+import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -15,22 +17,40 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import java.io.File;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class SearchActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+    Button list;
+    LocalMovieObject[] movielist;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
-        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        //setSupportActionBar(toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         Spinner dropdown = (Spinner)findViewById(R.id.spinner);
         String[] items = new String[]{"Title", "Genre", "Year"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, items);
         dropdown.setAdapter(adapter);
+
+
+
+        list = (Button) findViewById(R.id.list);
+        list.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(this, ListingActivity.class);
+                i.putExtra("searchElem","listall");
+                startActivity(i);
+            }
+        });
     }
 
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id){
@@ -42,14 +62,14 @@ public class SearchActivity extends AppCompatActivity implements AdapterView.OnI
         return;
     }
 
-    protected void search() throws Exception{
+    public void search(View view) throws Exception{
         EditText text = (EditText) findViewById(R.id.editText);
         String input = text.getText().toString();
-/*
-        Intent i = new Intent(this, ListActivity.class);
+
+        Intent i = new Intent(SearchActivity.this, ListingActivity.class);
         i.putExtra("searchElem", input);
         startActivity(i);
-        */
+
     }
 
 }
