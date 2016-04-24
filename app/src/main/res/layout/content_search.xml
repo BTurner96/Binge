@@ -43,9 +43,9 @@
         android:layout_height="wrap_content"
         android:text="Hulu"
         android:id="@+id/button2"
+        android:layout_marginBottom="190dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/textView3"
-        android:layout_marginBottom="194dp" />
+        android:layout_centerHorizontal="true" />
 
     <SearchView
         android:layout_width="wrap_content"
@@ -79,4 +79,14 @@
         android:textSize="50dp"
         android:textIsSelectable="true"
         android:textColor="#ffffff" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="List All"
+        android:id="@+id/list"
+        android:layout_alignTop="@+id/button2"
+        android:layout_alignParentEnd="true" />
+
+
+
 </RelativeLayout>
