@@ -46,6 +46,10 @@ public class LocalMovie{
         for (int i=0; i<n; i++)
             if(movies[i].matchTitle(search))
                 result=movies[i];
+<<<<<<< HEAD
+=======
+
+>>>>>>> jacey
 
         return result;
 

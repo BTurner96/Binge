@@ -115,5 +115,9 @@
 =======
     <string name="title_activity_search">SearchActivity</string>
     <string name="title_activity_listing">ListingActivity</string>
+<<<<<<< HEAD
 >>>>>>> f4e106c3383badc3c54141837e8a27978dab3906
+=======
+    <string name="title_activity_movie">MovieActivity</string>
+>>>>>>> jacey
 </resources>
