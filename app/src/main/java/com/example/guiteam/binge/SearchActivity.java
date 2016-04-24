@@ -43,7 +43,7 @@ public class SearchActivity extends AppCompatActivity implements AdapterView.OnI
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(this, ListingActivity.class);
-                i.putExtra("searchString", "listall");
+                i.putExtra("searchElem","listall");
                 startActivity(i);
             }
         });
