@@ -111,4 +111,5 @@
     </string>
     <string name="title_activity_search">SearchActivity</string>
     <string name="title_activity_listing">ListingActivity</string>
+    <string name="title_activity_movie">MovieActivity</string>
 </resources>
