@@ -25,7 +25,7 @@ public class SearchActivity extends AppCompatActivity implements AdapterView.OnI
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
         //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-       // setSupportActionBar(toolbar);
+        //setSupportActionBar(toolbar);
 
         Spinner dropdown = (Spinner)findViewById(R.id.spinner);
         String[] items = new String[]{"Title", "Genre", "Year"};
